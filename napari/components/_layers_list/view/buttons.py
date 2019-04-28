@@ -17,6 +17,7 @@ class QtLayersButtons(QFrame):
 
         layout = QHBoxLayout()
         layout.addStretch(0)
+        layout.setContentsMargins(0, 18, 34, 4)
         layout.addWidget(self.newMarkersButton)
         layout.addWidget(self.newShapesButton)
         layout.addWidget(self.deleteButton)
@@ -28,7 +29,6 @@ class QtDeleteButton(QPushButton):
         super().__init__()
 
         self.layers = layers
-        self.setIcon(QIcon(':/icons/delete.png'))
         self.setFixedWidth(28)
         self.setFixedHeight(28)
         self.setToolTip('Delete layers')
@@ -55,7 +55,6 @@ class QtNewMarkersButton(QPushButton):
         super().__init__()
 
         self.layers = layers
-        self.setIcon(QIcon(':icons/new_markers.png'))
         self.setFixedWidth(28)
         self.setFixedHeight(28)
         self.setToolTip('New markers layer')
@@ -67,7 +66,6 @@ class QtNewShapesButton(QPushButton):
         super().__init__()
 
         self.layers = layers
-        self.setIcon(QIcon(':icons/new_shapes.png'))
         self.setFixedWidth(28)
         self.setFixedHeight(28)
         self.setToolTip('New shapes layer')

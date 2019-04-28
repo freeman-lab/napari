@@ -19,6 +19,7 @@ class QtImageControls(QWidget):
         self.climSlider.setEnabled(True)
 
         layout = QHBoxLayout()
+        layout.setContentsMargins(12, 15, 10, 10)
         layout.addWidget(self.climSlider)
         self.setLayout(layout)
         self.setMouseTracking(True)
